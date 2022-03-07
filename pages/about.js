@@ -9,7 +9,7 @@ export default function about() {
       <Hero />
       <TheHost />
       <TheTeam />
-      <div>
+      <div id="contest-rules">
         <h2 className="text-3xl font-bold text-center">Contest Rules</h2>
         <a
           className="block px-6 py-4 m-auto mt-6 text-lg text-white transition-all bg-blue-700 rounded-lg w-max hover:scale-95"
