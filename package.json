@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.6.1",
     "hamburger-react": "^2.4.1",
     "linkedom": "^0.14.3",
     "next": "12.1.0",
