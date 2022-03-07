@@ -4,12 +4,10 @@ import RecentEpisodes from '../components/home/RecentEpisodes'
 
 export default function Home({episodes}) {
   return (
-    <div>
-      <div className="grid grid-cols-1 gap-16 md:gap-32">
-        <Hero />
-        <RecentEpisodes episodes={episodes} />
-        <Newsletter />
-      </div>
+    <div className="grid grid-cols-1 gap-16 md:gap-32">
+      <Hero />
+      <RecentEpisodes episodes={episodes} />
+      <Newsletter />
     </div>
   )
 }
