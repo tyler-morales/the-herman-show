@@ -64,27 +64,27 @@ export default function Nav() {
         {(toggleMenu || screenWidth > 1024) && (
           <div className="flex items-center lg:gap-6 flex-col lg:flex-row mt-4 lg:mt-0 w-full lg:w-auto">
             <Link href="/episodes">
-              <a className="text-2xl hover:bg-blue-700 hover:text-white transition-all px-4 py-4 border-b-2 border-gray-200 w-full text-center lg:border-0">
+              <a className="text-lg hover:bg-blue-700 hover:text-white transition-all px-4 py-4 border-b-2 border-gray-200 w-full text-center lg:border-0">
                 Episodes
               </a>
             </Link>
             <Link href="/stations">
-              <a className="text-2xl hover:bg-blue-700 hover:text-white transition-all px-4 py-4 border-b-2 border-gray-200 w-full text-center lg:border-0">
+              <a className="text-lg hover:bg-blue-700 hover:text-white transition-all px-4 py-4 border-b-2 border-gray-200 w-full text-center lg:border-0">
                 Stations
               </a>
             </Link>
             <Link href="/blog">
-              <a className="text-2xl hover:bg-blue-700 hover:text-white transition-all px-4 py-4 border-b-2 border-gray-200 w-full text-center lg:border-0">
+              <a className="text-lg hover:bg-blue-700 hover:text-white transition-all px-4 py-4 border-b-2 border-gray-200 w-full text-center lg:border-0">
                 Blog
               </a>
             </Link>
             <Link href="/about">
-              <a className="text-2xl hover:bg-blue-700 hover:text-white transition-all px-4 py-4 border-b-2 border-gray-200 w-full text-center lg:border-0">
+              <a className="text-lg hover:bg-blue-700 hover:text-white transition-all px-4 py-4 border-b-2 border-gray-200 w-full text-center lg:border-0">
                 About
               </a>
             </Link>
             <Link href="/contact">
-              <a className="text-2xl hover:bg-blue-700 hover:text-white transition-all px-4 py-4 border-b-2 border-gray-200 w-full text-center lg:border-0">
+              <a className="text-lg hover:bg-blue-700 hover:text-white transition-all px-4 py-4 border-b-2 border-gray-200 w-full text-center lg:border-0">
                 Contact
               </a>
             </Link>
