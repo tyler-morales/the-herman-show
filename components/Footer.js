@@ -7,7 +7,7 @@ import {ImSoundcloud2} from 'react-icons/im'
 
 export default function Footer() {
   return (
-    <footer className="flex-col-reverse md:flex-row px-6 border-t-2 border-gray-200 mt-20 max-w-7xl m-auto flex items-start justify-between pb-20 gap-8">
+    <footer className="flex flex-col-reverse items-start justify-between gap-8 px-6 pb-20 m-auto mt-20 border-t-2 border-gray-200 md:flex-row max-w-7xl">
       <div>
         <figure className="max-w-[400px] h-auto">
           <Image
@@ -45,30 +45,35 @@ export default function Footer() {
             <ImSoundcloud2 size="2.25em" />
           </a>
         </div>
-        <span className="text-xs block mt-4">
+        <span className="block mt-4 text-xs">
           The Herman Radio Network © {new Date().getFullYear()}
         </span>
       </div>
 
       <ul className="flex gap-6 mt-6">
         <li className="font-bold">
-          <Link href="about">
-            <a>About</a>
-          </Link>
-        </li>
-        <li className="font-bold">
-          <Link href="listen">
-            <a>Listen</a>
-          </Link>
-        </li>
-        <li className="font-bold">
           <Link href="episodes">
             <a>Episodes</a>
           </Link>
         </li>
         <li className="font-bold">
+          <Link href="stations">
+            <a>Stations</a>
+          </Link>
+        </li>
+        <li className="font-bold">
           <Link href="blog">
             <a>Blog</a>
+          </Link>
+        </li>
+        <li className="font-bold">
+          <Link href="about">
+            <a>About</a>
+          </Link>
+        </li>
+        <li className="font-bold">
+          <Link href="contact">
+            <a>Contact</a>
           </Link>
         </li>
       </ul>
