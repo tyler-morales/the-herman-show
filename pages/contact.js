@@ -1,17 +1,40 @@
 import {useState} from 'react'
 
+const statuses = {
+  DEFAULT: 'Send',
+  LOADING: 'Sending message...',
+  SENT: 'Message sent!',
+  ERROR: 'Something went wrong, please try again.',
+}
+
 export default function Contact() {
   const [name, setName] = useState(null)
   const [email, setEmail] = useState(null)
   const [message, setMessage] = useState(null)
   const [type, setType] = useState('GENERAL')
-  const [loading, setLoading] = useState(false)
+  const [status, setStatus] = useState(statuses.DEFAULT)
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(name, email, message, type)
 
-    // setLoading(true)
+    const data = {
+      name,
+      email,
+      type,
+      message,
+    }
+
+    setStatus(statuses.LOADING)
+    try {
+      fetch('/api/contact', {
+        method: 'post',
+        body: JSON.stringify(data),
+      })
+      setStatus(statuses.SENT)
+    } catch (err) {
+      setStatus(statuses.ERROR)
+      console.error(err)
+    }
   }
 
   return (
@@ -78,9 +101,9 @@ export default function Contact() {
           <button
             type="submit"
             className={`block w-full px-6 py-4 m-auto mt-6 text-xl text-white transition-all bg-blue-700 rounded-lg hover:scale-95 ${
-              loading && 'cursor-wait'
-            }`}>
-            {loading ? 'Sending...' : 'Send'}
+              status == statuses.LOADING && 'cursor-wait bg-orange-600'
+            } ${status == statuses.SENT && 'cursor-not-allowed bg-green-600'}`}>
+            {status}
           </button>
         </form>
       </section>
