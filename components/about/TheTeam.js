@@ -13,9 +13,9 @@ let members = [
 
 export default function TheTeam() {
   return (
-    <section className="max-w-7xl m-auto px-4 w-full">
-      <h2 className="font-bold text-3xl mb-6">The Team</h2>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <section className="w-full max-w-4xl px-4 m-auto">
+      <h2 className="mb-6 text-3xl font-bold text-center">The Team</h2>
+      <ul className="grid grid-cols-2 gap-8 md:grid-cols-3">
         {members.map((member, index) => {
           return (
             <li key={index} className="text-center">
@@ -27,7 +27,7 @@ export default function TheTeam() {
                 alt={member.name}
                 className="object-fit"
               />
-              <h4 className="mt-4 font-bold block">{member.name}</h4>
+              <h4 className="block mt-4 font-bold">{member.name}</h4>
               <span className="block">{member.position}</span>
             </li>
           )
