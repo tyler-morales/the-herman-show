@@ -1,4 +1,5 @@
 import Hero from '../components/home/Hero'
+import Newsletter from '../components/home/Newsletter'
 import RecentEpisodes from '../components/home/RecentEpisodes'
 import Nav from '../components/Nav'
 
@@ -9,6 +10,7 @@ export default function Home({episodes}) {
       <div className="grid grid-cols-1 gap-16 md:gap-32">
         <Hero />
         <RecentEpisodes episodes={episodes} />
+        <Newsletter />
       </div>
     </div>
   )
