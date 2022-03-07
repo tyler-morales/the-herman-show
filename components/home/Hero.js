@@ -5,7 +5,6 @@ import useResize from '../../hooks/useResize'
 
 export default function Hero() {
   const screenWidth = useResize()
-  console.log(screenWidth)
   return (
     <div className="mt-6 md:mt-10">
       <h1 className="text-center">
