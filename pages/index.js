@@ -12,7 +12,7 @@ export default function Home({episodes}) {
   )
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const response = await fetch('https://soundcloud.com/the-herman-show/tracks')
   const documentString = await response.text()
 
@@ -21,7 +21,6 @@ export const getServerSideProps = async () => {
     .split('</section>')[0]
 
   let articles = document.split('</article>')
-  // console.log(articles)
 
   const episodes = articles.slice(0, 4).map((article) => {
     let title = article?.split('">')[3].split('</a>')[0]
@@ -29,9 +28,6 @@ export const getServerSideProps = async () => {
     let link = article?.split('href="')[1].split('">')[0]
     return {title, date, link}
   })
-
-  // console.log(episodes[0].link)
-  // console.log(episodes)
 
   return {
     props: {

@@ -11,8 +11,6 @@ export default function RecentEpisodes({episodes}) {
         {/* Episode Cards */}
         <ul className="grid grid-cols-1 gap-6 mt-6 md:grid-cols-2">
           {episodes.map((episode, index) => {
-            console.log(`https://soundcloud.com/${episode.link}`)
-
             return (
               <li
                 key={index}
