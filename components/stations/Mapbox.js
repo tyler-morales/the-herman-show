@@ -5,7 +5,6 @@ import {FaMapMarkerAlt} from 'react-icons/fa'
 
 export default function MapBox({coordinates}) {
   const [popupInfo, setPopupInfo] = useState(null)
-  console.log(coordinates)
 
   const pins = useMemo(
     () =>
