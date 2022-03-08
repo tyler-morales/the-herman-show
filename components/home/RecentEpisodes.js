@@ -27,13 +27,15 @@ export default function RecentEpisodes({episodes}) {
                     className="block object-cover"
                   />
                 </figure>
-                <div>
+                <div className="w-full">
                   <span className="block mb-2 text-gray-400 text-md">
                     {episode.date}
                   </span>
-                  <h3 className="text-xl font-bold">{episode.title}</h3>
+                  <h3
+                    className="text-xl font-bold"
+                    dangerouslySetInnerHTML={{__html: episode.title}}></h3>
                   <a
-                    className="block px-6 py-3 mt-4 text-lg text-white transition-all bg-orange-500 rounded-md hover:scale-95"
+                    className="block px-6 py-3 mt-4 text-lg text-white transition-all bg-orange-500 rounded-md md:w-min hover:scale-95"
                     href={`https://soundcloud.com${episode.link}`}
                     target="_blank"
                     rel="noopener noreferrer">
