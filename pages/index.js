@@ -23,33 +23,19 @@ export const getServerSideProps = async () => {
   let articles = document.split('</article>')
   // console.log(articles)
 
-  const episodes = articles.map((article) => {
-    // console.log(article)
-    let title = article?.split('">')[3]
-    // console.log(title)
-    return {title}
+  const episodes = articles.slice(0, 4).map((article) => {
+    let title = article?.split('">')[3].split('</a>')[0]
+    let date = article?.split('<time pubdate>')[1].split('T')[0]
+    let link = article?.split('href="')[1].split('">')[0]
+    return {title, date, link}
   })
 
-  // console.log(episodes[0].title)
+  // console.log(episodes[0].link)
+  // console.log(episodes)
 
   return {
     props: {
-      episodes: [
-        {
-          id: 1,
-          title: 'Episode 1',
-          date: 'July 1, 2020',
-          img: 'https://i1.sndcdn.com/artworks-d3ydzVw4nj8ogeLR-0zx27g-t500x500.jpg',
-          link: '',
-        },
-        {
-          id: 2,
-          title: 'Episode 2',
-          date: 'July 15, 2022',
-          img: 'https://i1.sndcdn.com/artworks-d3ydzVw4nj8ogeLR-0zx27g-t500x500.jpg',
-          link: '',
-        },
-      ],
+      episodes: episodes,
     },
   }
 }
