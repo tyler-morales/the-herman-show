@@ -3,11 +3,11 @@ import React from 'react'
 
 export default function TheHost() {
   return (
-    <section className="px-4 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl m-auto">
+    <section className="grid grid-cols-1 gap-6 px-4 m-auto md:grid-cols-2 max-w-7xl">
       <div>
-        <h3 className="text-3xl font-bold my-4 ">About the Host</h3>
+        <h3 className="my-4 text-3xl font-bold ">About the Host</h3>
         <Image
-          src="/../public/images/brandonHerman.jpeg"
+          src="/images/brandonHerman.jpeg"
           width={400}
           height={250}
           layout="responsive"
@@ -17,7 +17,7 @@ export default function TheHost() {
       </div>
 
       <div className="self-end">
-        <h3 className="text-2xl font-bold my-4">Brandon Herman</h3>
+        <h3 className="my-4 text-2xl font-bold">Brandon Herman</h3>
         <p>
           I’m baby taiyaki next level gluten-free, polaroid hashtag streetart
           mumblecore farm-to-table quinoatypewriter salvia. Artparty

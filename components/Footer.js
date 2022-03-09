@@ -11,7 +11,7 @@ export default function Footer() {
       <div>
         <figure className="max-w-[400px] h-auto">
           <Image
-            src="/../public/images/cover.png"
+            src="/images/cover.png"
             layout="responsive"
             height={100}
             width={200}
@@ -52,27 +52,27 @@ export default function Footer() {
 
       <ul className="flex gap-6 mt-6">
         <li className="font-bold">
-          <Link href="episodes">
+          <Link href="/episodes">
             <a>Episodes</a>
           </Link>
         </li>
         <li className="font-bold">
-          <Link href="stations">
+          <Link href="/stations">
             <a>Stations</a>
           </Link>
         </li>
         <li className="font-bold">
-          <Link href="blog">
+          <Link href="/blog">
             <a>Blog</a>
           </Link>
         </li>
         <li className="font-bold">
-          <Link href="about">
+          <Link href="/about">
             <a>About</a>
           </Link>
         </li>
         <li className="font-bold">
-          <Link href="contact">
+          <Link href="/contact">
             <a>Contact</a>
           </Link>
         </li>
