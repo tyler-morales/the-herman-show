@@ -11,7 +11,7 @@ export default function blog({posts}) {
       <h1 className="text-5xl font-bold">Blog</h1>
       <section className="mt-10">
         {/* Posts */}
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post, index) => {
             return (
               <li

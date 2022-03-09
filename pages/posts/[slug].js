@@ -11,33 +11,38 @@ export default function Post({post}) {
     <main className="max-w-4xl px-5 m-auto mt-10">
       <h1 className="text-5xl font-bold text-center">{post.title}</h1>
       {/* Post Image */}
-      <figure className="mt-8 max-h-[500px] overflow-hidden">
+      <figure className="mt-8 max-h-[500px] w-full overflow-hidden">
         <Image
           {...useNextSanityImage(client, post.mainImage)}
           layout="responsive"
-          width={300}
-          height={300}
-          sizes="(max-height: 400px) 100%, 400px"
+          width={500}
+          height={500}
           className="object-cover"
           alt={post.title}
         />
       </figure>
 
-      {/* Author Image */}
-      <div className="flex items-center gap-6 mt-8">
-        <figure className="h-[50px] w-[50px]">
-          <Image
-            {...useNextSanityImage(client, post.author.image)}
-            layout="responsive"
-            width={50}
-            height={50}
-            sizes="(max-width: 50px) 100vw, 50px"
-            className="object-cover rounded-full"
-            alt={post.author.name}
-          />
-        </figure>
-        <span>{post.author.name}</span>
+      <div className="flex items-center justify-between mt-8">
+        {/* Date */}
+        <div>{post.publishedAt.split('T')[0]}</div>
+        {/* Author Image */}
+        <div className="flex items-center gap-6">
+          <figure className="h-[50px] w-[50px]">
+            <Image
+              {...useNextSanityImage(client, post.author.image)}
+              layout="responsive"
+              width={50}
+              height={50}
+              // sizes="(max-width: 50px) 100vw, 50px"
+              className="object-cover rounded-full"
+              alt={post.author.name}
+            />
+          </figure>
+          <span>{post.author.name}</span>
+        </div>
       </div>
+
+      <hr className="mt-10" />
 
       <section className="block mt-10">
         <PortableText value={post.body} />
@@ -73,6 +78,7 @@ export const getStaticProps = async ({params}) => {
     },
    mainImage,
    slug,
+   publishedAt,
    body
   }`
 
