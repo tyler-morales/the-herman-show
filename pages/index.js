@@ -1,14 +1,18 @@
 import Hero from '../components/home/Hero'
 import Newsletter from '../components/home/Newsletter'
 import RecentEpisodes from '../components/home/RecentEpisodes'
+import MetaData from '../components/MetaData'
 
 export default function Home({episodes}) {
   return (
-    <div className="grid grid-cols-1 gap-16 md:gap-32">
-      <Hero />
-      <RecentEpisodes episodes={episodes} />
-      <Newsletter />
-    </div>
+    <>
+      <MetaData page="Home" />
+      <div className="grid grid-cols-1 gap-16 md:gap-32">
+        <Hero />
+        <RecentEpisodes episodes={episodes} />
+        <Newsletter />
+      </div>
+    </>
   )
 }
 
