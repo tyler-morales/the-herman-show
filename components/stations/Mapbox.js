@@ -33,7 +33,7 @@ export default function MapBox({coordinates}) {
           zoom: 4,
         }}
         style={{width: '100%', height: 600}}
-        mapStyle="mapbox://styles/mapbox/streets-v9"
+        mapStyle="mapbox://styles/mapbox/streets-v11"
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_API_KEY}>
         {pins}
 
