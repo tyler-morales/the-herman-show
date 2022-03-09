@@ -10,12 +10,10 @@ export default function Post({post}) {
     <main className="max-w-4xl px-5 m-auto mt-10">
       <h1 className="text-5xl font-bold text-center">{post.title}</h1>
       {/* Post Image */}
-      <figure className="mt-8 max-h-[500px] w-full overflow-hidden">
+      <figure className="w-full mt-8">
         <Image
           {...useNextSanityImage(client, post.mainImage)}
           layout="responsive"
-          width={500}
-          height={500}
           className="object-cover"
           alt={post.title}
         />
@@ -46,6 +44,21 @@ export default function Post({post}) {
       <section className="block mt-10">
         <PortableText value={post.body} />
       </section>
+
+      <hr className="my-20" />
+
+      {/* CTA */}
+      <section className="text-center">
+        <h3 className="mb-4 text-3xl font-bold">Liked what you read?</h3>
+        <p>Consider joing my newsletter!</p>
+      </section>
+      <a
+        href="https://blogspot.us8.list-manage.com/subscribe?u=edd69c1aa277bd5a1709fd621&id=c2c3c37fbd"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block px-6 py-4 m-auto mt-6 text-lg text-white transition-all bg-blue-700 rounded-lg w-max hover:scale-95">
+        Join the mailing list
+      </a>
     </main>
   )
 }

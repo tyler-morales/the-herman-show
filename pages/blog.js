@@ -5,7 +5,6 @@ import {useNextSanityImage} from 'next-sanity-image'
 import client from '../client'
 
 export default function blog({posts}) {
-  console.log(posts[0])
   return (
     <main className="px-5 m-auto mt-10 max-w-7xl">
       <h1 className="text-5xl font-bold">Blog</h1>
