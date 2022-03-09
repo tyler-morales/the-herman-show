@@ -5,6 +5,11 @@
 /.pnp
 .pnp.js
 
+# sanity
+thehermanshowcms/node_modules
+thehermanshowcms/dist
+thehermanshowcms/node_modules
+
 # testing
 /coverage
 
