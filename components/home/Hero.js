@@ -16,7 +16,7 @@ export default function Hero() {
       <p className="mt-4 text-lg text-center">A Talk & Music Radio Show</p>
       <figure className="relative m-auto mt-6 max-w-7xl">
         <Image
-          src="/../public/images/hero.jpeg"
+          src="/images/hero.jpeg"
           height={screenWidth > 640 ? '400px' : '700'}
           width={1000}
           layout="responsive"

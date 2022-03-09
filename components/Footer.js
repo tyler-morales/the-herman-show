@@ -11,7 +11,7 @@ export default function Footer() {
       <div>
         <figure className="max-w-[400px] h-auto">
           <Image
-            src="/../public/images/cover.png"
+            src="/images/cover.png"
             layout="responsive"
             height={100}
             width={200}

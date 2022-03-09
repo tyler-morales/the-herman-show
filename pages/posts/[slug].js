@@ -94,7 +94,6 @@ export const getStaticProps = async ({params}) => {
 
   const {slug} = params
 
-  console.log(slug)
   const post = await client.fetch(query, {slug})
 
   return {props: {post}}
