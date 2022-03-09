@@ -6,7 +6,6 @@ import {PortableText} from '@portabletext/react'
 import Image from 'next/image'
 
 export default function Post({post}) {
-  console.log(post)
   return (
     <main className="max-w-4xl px-5 m-auto mt-10">
       <h1 className="text-5xl font-bold text-center">{post.title}</h1>
@@ -60,8 +59,6 @@ export const getStaticPaths = async () => {
     }`
   )
 
-  // console.log(paths)
-
   return {
     paths,
     fallback: true,
@@ -89,22 +86,3 @@ export const getStaticProps = async ({params}) => {
 
   return {props: {post}}
 }
-
-// const query = `*[_type == "post"]{
-//   _id,
-//   slug{
-//     current
-//   }
-// }`
-
-// const posts = await client.fetch(query)
-// const paths = posts.map((post) => {
-//   {
-//     slug: post.slug.current
-//   }
-// })
-
-// return {
-//   paths,
-//   fallback: true,
-// }
